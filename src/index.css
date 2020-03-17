@@ -7,11 +7,10 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  cursor: url("images/cursor.png"), -moz-zoom-in;
+  cursor: url("./images/cursor.png"), auto;
   user-select: none;
 }
 body {
-  cursor: url("images/cursor.png"), -moz-zoom-in;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
