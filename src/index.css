@@ -10,6 +10,12 @@ html {
   cursor: url("./images/cursor.png"), auto;
   user-select: none;
 }
+a {
+  cursor: url("./images/cursor.png"), auto;
+}
+a:hover {
+  opacity: 80%;
+}
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
