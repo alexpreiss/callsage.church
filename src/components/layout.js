@@ -28,7 +28,30 @@ const Layout = ({ children }) => {
         <Header />
         <div>
           <main>{children}</main>
-          <footer></footer>
+          <footer>
+            <h5
+              style={{
+                outline: "white",
+                display: "flex",
+                justifyContent: "center",
+                padding: 0,
+                margin: 0,
+              }}
+            >
+              FAT BALLS HD
+            </h5>
+
+            <h3
+              style={{
+                outline: "white",
+                display: "flex",
+                justifyContent: "center",
+                padding: 10,
+              }}
+            >
+              SAGE © {new Date().getFullYear()}
+            </h3>
+          </footer>
         </div>
       </div>
     </BackgroundImage>

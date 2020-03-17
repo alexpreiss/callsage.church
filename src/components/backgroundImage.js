@@ -31,6 +31,7 @@ export default class BackgroundImage extends React.Component {
   componentDidMount() {
     this.setState({
       phrase: this.generateRandomInteger(1, 8),
+      image: this.generateRandomInteger(1, 6),
     })
   }
 
@@ -39,7 +40,42 @@ export default class BackgroundImage extends React.Component {
       <StaticQuery
         query={graphql`
           query {
-            backgroundImg: file(relativePath: { eq: "background.png" }) {
+            one: file(relativePath: { eq: "background1.png" }) {
+              childImageSharp {
+                fluid(quality: 90, maxWidth: 1920) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            two: file(relativePath: { eq: "background2.png" }) {
+              childImageSharp {
+                fluid(quality: 90, maxWidth: 1920) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            three: file(relativePath: { eq: "background3.png" }) {
+              childImageSharp {
+                fluid(quality: 90, maxWidth: 1920) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            four: file(relativePath: { eq: "background4.png" }) {
+              childImageSharp {
+                fluid(quality: 90, maxWidth: 1920) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            five: file(relativePath: { eq: "background5.jpg" }) {
+              childImageSharp {
+                fluid(quality: 90, maxWidth: 1920) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            six: file(relativePath: { eq: "background6.png" }) {
               childImageSharp {
                 fluid(quality: 90, maxWidth: 1920) {
                   ...GatsbyImageSharpFluid_withWebp
@@ -49,8 +85,23 @@ export default class BackgroundImage extends React.Component {
           }
         `}
         render={data => {
-          // Set ImageData.
-          const imageData = data.backgroundImg.childImageSharp.fluid
+          const numberToWord = () => {
+            if (this.state.image === 1) {
+              return "one"
+            } else if (this.state.image === 2) {
+              return "two"
+            } else if (this.state.image === 3) {
+              return "three"
+            } else if (this.state.image === 4) {
+              return "four"
+            } else if (this.state.image === 5) {
+              return "five"
+            } else if (this.state.image === 6) {
+              return "six"
+            }
+          }
+
+          const imageData = data[numberToWord()].childImageSharp.fluid
           return (
             <>
               <Img

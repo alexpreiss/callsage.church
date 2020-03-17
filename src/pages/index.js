@@ -35,8 +35,7 @@ const IndexPage = () => (
 
       <div
         style={{
-          marginTop: "75px",
-          marginBottom: "100px",
+          margin: "75px 0px",
           display: "flex",
           width: "50%",
           justifyContent: "space-around",
