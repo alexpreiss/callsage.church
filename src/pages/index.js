@@ -45,42 +45,31 @@ const IndexPage = () => (
       >
         <a
           style={{ width: "15%" }}
-          className="media-icon"
           href="https://www.instagram.com/michaelfreedmann"
         >
-          <img src={instagram} />
+          <img className="media-icon" src={instagram} />
+        </a>
+
+        <a style={{ width: "15%" }} href="https://twitter.com/Michael40790623">
+          <img className="media-icon" src={twitter} />
+        </a>
+
+        <a style={{ width: "15%" }} href="https://soundcloud.com/callsage">
+          <img className="media-icon" src={soundcloud} />
         </a>
 
         <a
-          className="media-icon"
-          style={{ width: "15%" }}
-          href="https://twitter.com/Michael40790623"
-        >
-          <img src={twitter} />
-        </a>
-
-        <a
-          className="media-icon"
-          style={{ width: "15%" }}
-          href="https://soundcloud.com/callsage"
-        >
-          <img src={soundcloud} />
-        </a>
-
-        <a
-          className="media-icon"
           style={{ width: "15%" }}
           href="https://music.apple.com/us/artist/sage/1502779907"
         >
-          <img src={apple} />
+          <img className="media-icon" src={apple} />
         </a>
 
         <a
-          className="media-icon"
           style={{ width: "15%" }}
           href="https://open.spotify.com/artist/79Jfe2eoVugLlnpuOqqjhS"
         >
-          <img src={spotify} />
+          <img className="media-icon" src={spotify} />
         </a>
       </div>
     </div>
