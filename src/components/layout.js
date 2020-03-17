@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql, StaticQuery } from "gatsby"
 
-import BackgroundImage from "gatsby-background-image"
+import Img from "gatsby-image"
 
 import Header from "./header"
 
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
     <StaticQuery
       query={graphql`
         query {
-          desktop: file(relativePath: { eq: "background.png" }) {
+          backgroundImg: file(relativePath: { eq: "background.png" }) {
             childImageSharp {
               fluid(quality: 90, maxWidth: 1920) {
                 ...GatsbyImageSharpFluid_withWebp
@@ -31,25 +31,35 @@ const Layout = ({ children }) => {
       `}
       render={data => {
         // Set ImageData.
-        const imageData = data.desktop.childImageSharp.fluid
+        const imageData = data.backgroundImg.childImageSharp.fluid
         return (
-          <BackgroundImage
-            fluid={imageData}
-            style={{
-              width: "100%",
-              height: "100vh",
-              backgroundPosition: "center",
-              backgroundRepeat: "repeat-y",
-            }}
-          >
-            <Header />
-            <div>
-              <main>{children}</main>
-              {/* <footer>
+          <>
+            <Img
+              fluid={imageData}
+              style={{
+                width: "100%",
+                height: "100vh",
+                position: "fixed",
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+              }}
+            >
+              <Header />
+              <div>
+                <main>{children}</main>
+                {/* <footer>
 
               </footer> */}
+              </div>
             </div>
-          </BackgroundImage>
+          </>
         )
       }}
     />

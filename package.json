@@ -19,6 +19,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-simple-soundcloud-widget": "0.0.5",
+    "react-spotify-player": "^1.0.4",
     "react-youtube-embed": "^1.0.3"
   },
   "devDependencies": {
