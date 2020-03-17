@@ -7,8 +7,11 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  cursor: url("images/cursor.png"), -moz-zoom-in;
+  user-select: none;
 }
 body {
+  cursor: url("images/cursor.png"), -moz-zoom-in;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -544,15 +547,12 @@ samp {
 }
 abbr {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
 }
 acronym {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
 }
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
   text-decoration: none;
 }
 thead {
