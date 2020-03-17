@@ -15,7 +15,6 @@ import twitter from "../images/social-media-icons/twitter.png"
 const IndexPage = () => (
   <Layout>
     <SEO />
-    <h2 style={{ position: "fixed", padding: "10px" }}>FUCK SHIT UP</h2>
     <div
       style={{
         width: "100%",
