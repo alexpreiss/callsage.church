@@ -7,39 +7,52 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, StaticQuery } from "gatsby"
+
+import BackgroundImage from "gatsby-background-image"
 
 import Header from "./header"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+import "./index.css"
 
+const Layout = ({ children }) => {
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <StaticQuery
+      query={graphql`
+        query {
+          desktop: file(relativePath: { eq: "background.png" }) {
+            childImageSharp {
+              fluid(quality: 90, maxWidth: 1920) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+      `}
+      render={data => {
+        // Set ImageData.
+        const imageData = data.desktop.childImageSharp.fluid
+        return (
+          <BackgroundImage
+            fluid={imageData}
+            style={{
+              width: "100%",
+              height: "100vh",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+            }}
+          >
+            <Header />
+            <div>
+              <main>{children}</main>
+              {/* <footer>
+
+              </footer> */}
+            </div>
+          </BackgroundImage>
+        )
+      }}
+    />
   )
 }
 

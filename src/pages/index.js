@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -7,9 +8,7 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO />
-    <h1>Hi Sage</h1>
-
-    <Link to="/page-2/">Go to page 2</Link>
+    <h2>FUCK SHIT UP</h2>
   </Layout>
 )
 
