@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
 import Youtube from "react-youtube-embed"
 import SoundCloudWidget from "react-simple-soundcloud-widget"
 
@@ -46,20 +45,30 @@ const IndexPage = () => (
       >
         <a
           style={{ width: "15%" }}
+          className="media-icon"
           href="https://www.instagram.com/michaelfreedmann"
         >
           <img src={instagram} />
         </a>
 
-        <a style={{ width: "15%" }} href="https://twitter.com/Michael40790623">
+        <a
+          className="media-icon"
+          style={{ width: "15%" }}
+          href="https://twitter.com/Michael40790623"
+        >
           <img src={twitter} />
         </a>
 
-        <a style={{ width: "15%" }} href="https://soundcloud.com/callsage">
+        <a
+          className="media-icon"
+          style={{ width: "15%" }}
+          href="https://soundcloud.com/callsage"
+        >
           <img src={soundcloud} />
         </a>
 
         <a
+          className="media-icon"
           style={{ width: "15%" }}
           href="https://music.apple.com/us/artist/sage/1502779907"
         >
@@ -67,6 +76,7 @@ const IndexPage = () => (
         </a>
 
         <a
+          className="media-icon"
           style={{ width: "15%" }}
           href="https://open.spotify.com/artist/79Jfe2eoVugLlnpuOqqjhS"
         >

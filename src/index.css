@@ -14,8 +14,8 @@ a {
   cursor: url("./images/cursor.png"), auto;
 }
 
-a:hover {
-  opacity: 81%;
+.media-icon:hover {
+  opacity: 80%;
 }
 
 body {
