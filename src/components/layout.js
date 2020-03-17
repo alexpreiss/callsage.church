@@ -13,7 +13,7 @@ import BackgroundImage from "gatsby-background-image"
 
 import Header from "./header"
 
-import "./index.css"
+import "../index.css"
 
 const Layout = ({ children }) => {
   return (
@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
               width: "100%",
               height: "100vh",
               backgroundPosition: "center",
-              backgroundSize: "cover",
+              backgroundRepeat: "repeat-y",
             }}
           >
             <Header />
