@@ -28,6 +28,7 @@ const Layout = ({ children }) => {
         <Header />
         <div>
           <main>{children}</main>
+
           <footer>
             <h5
               style={{

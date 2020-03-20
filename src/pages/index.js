@@ -12,6 +12,8 @@ import soundcloud from "../images/social-media-icons/soundcloud.png"
 import spotify from "../images/social-media-icons/spotify.png"
 import twitter from "../images/social-media-icons/twitter.png"
 
+import "../css/responsive.css"
+
 const IndexPage = () => (
   <Layout>
     <SEO />
@@ -23,24 +25,20 @@ const IndexPage = () => (
         alignItems: "center",
       }}
     >
-      <div style={{ width: "50%", marginTop: "75px" }}>
+      <div className="widget" style={{ marginTop: "75px" }}>
         <Youtube id="GKgstTR8MeI" />
       </div>
-      <div style={{ marginTop: "75px", width: "50%" }}>
-        <SoundCloudWidget url="https://soundcloud.com/callsage/grow" />
-      </div>
-      <div style={{ marginTop: "15px", width: "50%" }}>
-        <SoundCloudWidget url="https://soundcloud.com/callsage/bonus-track-1" />
+
+      <div className="soundcloud-widget-container">
+        <div className="widget">
+          <SoundCloudWidget url="https://soundcloud.com/callsage/grow" />
+        </div>
+        <div className="widget">
+          <SoundCloudWidget url="https://soundcloud.com/callsage/bonus-track-1" />
+        </div>
       </div>
 
-      <div
-        style={{
-          margin: "75px 0px",
-          display: "flex",
-          width: "50%",
-          justifyContent: "space-around",
-        }}
-      >
+      <div className="social-media-icons-container">
         <a
           style={{ width: "15%" }}
           href="https://www.instagram.com/michaelfreedmann"
