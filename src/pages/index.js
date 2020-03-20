@@ -41,7 +41,7 @@ const IndexPage = () => (
       <div className="social-media-icons-container">
         <a
           style={{ width: "15%" }}
-          href="https://www.instagram.com/michaelfreedmann"
+          href="https://www.instagram.com/callsage.church"
         >
           <img className="media-icon" src={instagram} />
         </a>
