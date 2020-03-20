@@ -31,7 +31,7 @@ export default class BackgroundImage extends React.Component {
   componentDidMount() {
     this.setState({
       phrase: this.generateRandomInteger(1, 8),
-      image: this.generateRandomInteger(1, 6),
+      image: this.generateRandomInteger(1, 5),
     })
   }
 
@@ -68,14 +68,7 @@ export default class BackgroundImage extends React.Component {
                 }
               }
             }
-            five: file(relativePath: { eq: "background5.jpg" }) {
-              childImageSharp {
-                fluid(quality: 90, maxWidth: 1920) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-            six: file(relativePath: { eq: "background6.png" }) {
+            five: file(relativePath: { eq: "background5.png" }) {
               childImageSharp {
                 fluid(quality: 90, maxWidth: 1920) {
                   ...GatsbyImageSharpFluid_withWebp
@@ -96,8 +89,6 @@ export default class BackgroundImage extends React.Component {
               return "four"
             } else if (this.state.image === 5) {
               return "five"
-            } else if (this.state.image === 6) {
-              return "six"
             }
           }
 
