@@ -14,10 +14,6 @@ a {
   cursor: url("./images/cursor.png"), auto;
 }
 
-.media-icon:hover {
-  opacity: 80%;
-}
-
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;

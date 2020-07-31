@@ -11,6 +11,10 @@
   justify-content: space-around;
 }
 
+.media-icon:hover {
+  opacity: 80%;
+}
+
 @media only screen and (max-width: 969px) {
   .widget {
     width: 90%;
